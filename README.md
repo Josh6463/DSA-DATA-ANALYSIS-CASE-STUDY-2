@@ -26,12 +26,7 @@ Here is an outline of the step by step processes taken in the completion of this
 - Inspected table structure and cleaned data where necessary.
 - Ran SQL queries to answer business questions.
 - Documented key findings and recommendations.
-- 
-  1. Which product category had the highest sales?
-2. What are the Top 3 and Bottom 3 regions in terms of sales?
-3. What were the total sales of appliances in Ontario?
-4. Advise the management of KMS on what to do to increase the revenue from the bottom
-10 customers
+
 5. KMS incurred the most shipping cost using which shipping method?
 Case Scenario II
 6. Who are the most valuable customers, and what products or services do they typically
