@@ -13,5 +13,6 @@ The KMS SQL Case Study dataset contains transactional sales records for a retail
 - Sales performance metrics: Sales, Quantity Ordered, Profit
 - Shipping details: Shipping Mode, Shipping Cost (if available)
   
- This dataset is used to analyse sales performance, customer value, regional       contributions, and shipping cost efficiency for strategic business decision-making.
-   
+
+## Introduction
+In this project, I explored the KMS retail sales data using SQL to uncover powerful business insights. From discovering the best-selling products and top regions to finding out which customers buy the most and how shipping costs can be optimised, this analysis reveals what drives KMS’s revenue. The findings provide clear, data-backed recommendations to help the company grow faster and spend smarter. Dive in to see how simple SQL queries can unlock strategies that boost profits and transform business decisions.
