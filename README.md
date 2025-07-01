@@ -130,10 +130,12 @@ I. Explanation
 3. Sum the sales of Appliances in the Region AS OntarioAppliancesTotalsales
 
 II. Findings
+
 1. The totalsales of Appliance in the Ontario is (# 202346.840)
 2. Also found out that Appliances is of the top selling product in Ontario while  I compared its Totalsales With the Totalsales of Products in the Region
    
 III. Recommendation/Advice
+
  I recommend that the company supplies more products under Appliances to Ontario as the count of distinct products under Appliances is 72 which is very low compared to other subs-Category like paper,office Furnishing and many more
 
  Q4. Advise the management of KMS on what to do to increase the revenue from the bottom
@@ -145,6 +147,7 @@ III. Recommendation/Advice
   Order by TotalBottomCustomersales asc;
 ```
 ![image](https://github.com/user-attachments/assets/e862aaa2-68f4-47fa-8786-99d44c0104b4)
+
 The below Query shows the breakdown of the various product Purchased by this Bottom Customers in term of sales
 ```sql
     select Customer_Name, Sum(sales) AS Lowestrevenue,
@@ -173,7 +176,35 @@ The above tables shows that the Bottom Revenue(sales) by customer_name and the B
 This Could be due to low Quality Products,lack of visibliy caused by Inappropriate Marketing Strategy, High product Cost, NO/Low Discount and some other factors.
 
 III. Advise/Recommendation
-- I advise the company to review the quality of the products produced under the Office Supplies Category
-- 
+
+- I advise the company to review the quality of the products produced under the Office Supplies Category.
+- The Company should also track the Progress of the Product_Category in their marketing Strategy and If possible reduces the cost of the Products in the Category.
+
+Q5. KMS incurred the most shipping cost using which shipping method?
+```sql
+      select top 1 Ship_Mode,
+       Sum(Shipping_Cost) As Highestshippingcost
+        From [KMS Sql Case Study] 
+	group by Ship_Mode 
+   Order by Highestshippingcost  desc;
+```
+![image](https://github.com/user-attachments/assets/226d7987-9caa-40de-a567-48b570791b77)
+
+```sql
+     select top 10 (Shipping_Cost) As HighestshippingCost,
+    Ship_Mode,Ship_Date
+    from [KMS Sql Case Study] 
+     group by Shipping_Cost,Ship_Mode,Ship_Date
+      order by HighestshippingCost desc
+    ```
+
+![image](https://github.com/user-attachments/assets/2ff13e75-d4b2-41dd-8045-71315dbcbcbf)
+
+
+
+
+      
+   
+  
 
 
