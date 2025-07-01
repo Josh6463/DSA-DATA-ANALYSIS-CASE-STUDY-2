@@ -11,7 +11,7 @@ The KMS SQL Case Study dataset contains transactional sales records for a retail
 - Customer details: Customer Name, Segment, Region
 - Product details: Product Category, Sub-Category
 - Sales performance metrics: Sales, Quantity Ordered, Profit
-- Shipping details: Shipping Mode, Shipping Cost (if available)
+- Shipping details: Shipping Mode, Shipping Cost 
   
 
 ## Introduction
@@ -159,3 +159,21 @@ The below Query shows the breakdown of the various product Purchased by this Bot
 GROUP BY Customer_Name, Product_Category
 ORDER BY Customer_Name, Lowestrevenue asc
 ```
+![image](https://github.com/user-attachments/assets/adffa82b-3c97-40e8-ab98-2258ce5e5c91)
+
+I. Explanation
+1. Group the data by Customer_Name and Product_category
+2. Sum the sales as TotalBottomsales based on the Category and the Customer_Name
+3. filter the result by selecting the top 10 and sort it to give the result for      the lowest sales using order by  asc
+4. Ran the second query to breakdown the product_Category this Customer_Name falls in and to know the Products they normally purchase
+
+II. Findings
+
+The above tables shows that the Bottom Revenue(sales) by customer_name and the Bottom 10 Customer purchases from the Office Supplies Category and this made Office the Lowest Purchase Product_Category.
+This Could be due to low Quality Products,lack of visibliy caused by Inappropriate Marketing Strategy, High product Cost, NO/Low Discount and some other factors.
+
+III. Advise/Recommendation
+- I advise the company to review the quality of the products produced under the Office Supplies Category
+- 
+
+
