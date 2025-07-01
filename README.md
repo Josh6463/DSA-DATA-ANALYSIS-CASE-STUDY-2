@@ -45,9 +45,89 @@ Express Air is the fastest but the most expensive one, do you think the company
 appropriately spent shipping costs based on the Order Priority? Explain your answer
 
   ### SQL QUERIES WITH ITS RESULT
-   1. Which product category had the highest sales?
-````` select top 1 Product_Category, Sum(Sales) AS HighestSales
+   Q1. Which product category had the highest sales
+```sql
+select top 1 Product_Category, Sum(Sales) AS HighestSales
  FROM [KMS Sql Case Study]
  Group by Product_Category
- Order By HighestSales desc `````
+ Order By HighestSales desc;
+```
+![image](https://github.com/user-attachments/assets/d3aafd58-3a02-42e8-9694-242236794828)
+ I. Explanation:
+- Grouped data by product category.
+- Summed sales within each category.
+- Ordered descending to identify the highest.
+II. Finding:
+  -The product category with the highest sales is Technology with total sales of 
+(# 5984248.183)
 
+Q2. What are the Top 3 and Bottom 3 regions in terms of sales?
+   ```sql
+   select top 3 Region, sum(sales) AS TopRegionsales,
+    'TOP' AS RANKGROUP
+   FROM KMS Sql Case Study
+   Group by Region
+   order by TopRegionsales DESC
+  ```
+ ```sql
+ select top 3 Region, Sum(Sales) AS BottomSales,
+  'BOTTOM' AS RANKGROUP
+ From  KMS Sql Case Study
+ Group by Region 
+ Order by Bottomsales ASC;
+```
+![image](https://github.com/user-attachments/assets/3846f1af-dfcd-49c1-afdb-370660f19e05)
+```sql
+SELECT * FROM (
+    SELECT TOP 3 Region, SUM(Sales)
+    AS TotalSales, 'Top' AS RankGroup
+    FROM [KMS Sql Case Study]
+    GROUP BY Region
+    ORDER BY SUM(Sales) DESC
+) AS Top3
+UNION ALL
+SELECT * FROM (
+    SELECT TOP 3 Region, SUM(Sales)
+  AS TotalSales, 'Bottom' AS RankGroup
+    FROM [KMS Sql Case Study]
+    GROUP BY Region
+    ORDER BY SUM(Sales) ASC
+) AS Bottom3
+ORDER BY Totalsales, RankGroup  DESC;
+```
+![image](https://github.com/user-attachments/assets/97528c74-38cd-41e6-9b10-56057377551b)
+
+I. Explanation
+1. Group the data by the region and sum the sales of the data based on the region as totalsales. I also used RankGroup(top and Bottom) to represent the position of the result based on the region sales
+2. Union all the two query inorder to combine the various result gotten from the queries into a single table
+   
+II. Findings
+
+The above Table shows that the regions with the highest sales are;
+1. West with (# 3597549.278) total sales
+2. Ontario	with (# 3063212.480) total sales
+3. Prarie	 with (# 2837304.602)	 total sales
+ 
+And the regions with the lowest(bottom) sales are ;
+1. Yukon	with (# 975867.374)	Totalsales
+2. Northwest Territories with (#	800847.330	) Totalsales
+3. Nunavut	with (# 116376.484) totalsales
+
+Q3. What were the total sales of appliances in Ontario?
+   
+```sql
+select Product_Sub_Category,Region,
+ sum(Sales) AS OntarioAppliancesTotalsales
+ From [KMS Sql Case Study] 
+  Where Region = 'Ontario' and  Product_Sub_category = 'Appliances'
+  group by Region, Product_Sub_Category
+  ```
+![image](https://github.com/user-attachments/assets/8570b387-2bbd-4496-bb25-0bd5bdf17240)
+
+I. Explanation
+1. Group the data by product_Sub_Category
+2. filter it down to the desired Region by using a conditional clause 'where' and 'and' to get the total sale of Appliances in Ontario
+3. Sum the sales of Appliances in the Region AS OntarioAppliancesTotalsales
+
+II. Findings
+The totalsales of Appliance in the Ontario is (# 202346.840)
