@@ -1,5 +1,6 @@
 
  Q5. KMS incurred the most shipping cost using which shipping method?
+ 
      ```sql
         select top 1 Ship_Mode,
          Sum(Shipping_Cost) As Highestshippingcost
