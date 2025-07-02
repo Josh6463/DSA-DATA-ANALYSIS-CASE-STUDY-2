@@ -28,7 +28,7 @@ Here is an outline of the step by step processes taken in the completion of this
 - Documented key findings and recommendations.
 
   ### SQL QUERIES WITH ITS RESULT
-   Q1. Which product category had the highest sales
+  #### Q1. Which product category had the highest sales
 ```sql
 select top 1 Product_Category, Sum(Sales) AS HighestSales
  FROM [KMS Sql Case Study]
@@ -46,7 +46,7 @@ II. Finding:
   -The product category with the highest sales is Technology with total sales of 
 (# 5984248.183)
 
-Q2. What are the Top 3 and Bottom 3 regions in terms of sales?
+#### Q2. What are the Top 3 and Bottom 3 regions in terms of sales?
    ```sql
    select top 3 Region, sum(sales) AS TopRegionsales,
     'TOP' AS RANKGROUP
@@ -165,7 +165,7 @@ III. Advise/Recommendation
 - I advise the company to review the quality of the products produced under the Office Supplies Category.
 - The Company should also track the Progress of the Product_Category in their marketing Strategy and If possible reduces the cost of the Products in the Category.
 
-Q5. KMS incurred the most shipping cost using which shipping method?
+#### Q5. KMS incurred the most shipping cost using which shipping method?
 ```sql
       select top 1 Ship_Mode,
        Sum(Shipping_Cost) As Highestshippingcost
@@ -183,6 +183,8 @@ Q5. KMS incurred the most shipping cost using which shipping method?
       order by HighestshippingCost desc
     ```
 ![image](https://github.com/user-attachments/assets/2ff13e75-d4b2-41dd-8045-71315dbcbcbf)
+
+
 
 
 
