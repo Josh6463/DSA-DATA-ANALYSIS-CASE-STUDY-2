@@ -79,8 +79,7 @@ III. The breakdown of the Product bought the Most Valuable Customers are
 
 This resulted to a table with a lot of rows because the Customers actually bought Products from Different Category which resulted in Their Names being Repeated in multiple rows.
 
-9. Which consumer customer was the most profitable one?
-10. Which customer returned items, and what segment do they belong to?
+
 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
 
 Q7. Which small business customer had the highest sales?
@@ -139,9 +138,52 @@ Q9 Which consumer customer was the most profitable one?
 ```
 ![image](https://github.com/user-attachments/assets/1309bd83-4006-4ab6-be6c-6bbf1dfadf12)
 
-I. Explanation
+I. Explanation;
 - group the data by the Customer_Name,Customer_Segment and summed the Profit based on the group AS MostProfittable
 - used a conditional clause 'where' to filter the Customer_segment to a desired segment and sort the Sales in descending order to get the highest profit
+
+II. findings;
+-Found out the Consumer customer That is most Profitable is 'Emily Phan with profit of (# 34005.44)
+
+10. Which customer returned items, and what segment do they belong to?
+11. If the delivery truck is the most economical but the slowest shipping method and
+Express Air is the fastest but the most expensive one, do you think the company
+appropriately spent shipping costs based on the Order Priority? Explain your answer
+
+```sql
+      select top 10 Customer_Name,Customer_segment 
+     from [KMS Sql Case Study]
+     where profit < 0
+     group by Customer_Name,Customer_segment
+  ```
+  ![image](https://github.com/user-attachments/assets/748baadf-d48a-4657-92bf-f6c36a3ca72a)
+ 
+I. Explanation
+
+Since there is no Return column in the data given'which could have been the best column to use for the analysis', I assumed that the profit column where there were negative values(loss) could be as a result of the items returned by the customers. The refunds of such Customer will return to be a loss to the organistion based on the cost of production of such Items
+
+II. Findings;
+
+The Table Above shows the list of top 10 Customers that returned Items and the segments those Items belongs to
+The second table the Customer_Name with the number of returns and the segment those Items were return to
+- this table shows that Most Returned Items belong to the Consumer_segment which could depict that there is something wrong with the quality of Products Under the Consumer Category
+
+  Q11. 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
+ ```sql 
+       select Order_priority,Ship_Mode,
+       count(distinct Order_ID) AS TotalOrder
+       From [KMS Sql Case Study]
+       Group by Order_priority,Ship_Mode
+       order by Order_priority,TotalOrder desc;
+      ```
+![image](https://github.com/user-attachments/assets/1cb56b29-8b1e-45a1-a9c0-ac419918b91b)
+
+
+
+
+
+
+
   
 
 
