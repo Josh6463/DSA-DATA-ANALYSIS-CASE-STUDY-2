@@ -48,10 +48,12 @@ select top 1 Product_Category, Sum(Sales) AS HighestSales
  Order By HighestSales desc;
 ```
 ![image](https://github.com/user-attachments/assets/d3aafd58-3a02-42e8-9694-242236794828)
+
  I. Explanation:
 - Grouped data by product category.
 - Summed sales within each category.
 - Ordered descending to identify the highest.
+- 
 II. Finding:
   -The product category with the highest sales is Technology with total sales of 
 (# 5984248.183)
@@ -192,7 +194,6 @@ Q5. KMS incurred the most shipping cost using which shipping method?
      group by Shipping_Cost,Ship_Mode,Ship_Date
       order by HighestshippingCost desc
     ```
-
 ![image](https://github.com/user-attachments/assets/2ff13e75-d4b2-41dd-8045-71315dbcbcbf)
 
 
