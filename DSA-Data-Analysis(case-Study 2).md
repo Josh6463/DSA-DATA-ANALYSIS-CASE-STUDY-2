@@ -176,8 +176,13 @@ The second table the Customer_Name with the number of returns and the segment th
        Group by Order_priority,Ship_Mode
        order by Order_priority,TotalOrder desc;
       ```
+
 ![image](https://github.com/user-attachments/assets/a164a73d-7680-48f4-ae5e-1785203960a7)
 ![image](https://github.com/user-attachments/assets/b09e21c4-0437-402f-80ed-cdf0f70ab89e)
+
+#### Findings;
+- The company didn't spend shipping costs based on the Order Priority appropriately because Critical,and high priority Order should use the Express Air ship_mode but found out that Most of the Critical and High Priority Order uses the Delivery truck and Regular Air Ship_Mode which amount to the Highestshipping Cost By ship_mode. Orders with Low,and Medium Order_Priority ought to use the Delivery Truck as Ship_mode but some of the low,Medium Order_priority uses the Air Express as The Ship_Mode and this result to inappropriate spending of the Company Revenue.
+
 
 
 
