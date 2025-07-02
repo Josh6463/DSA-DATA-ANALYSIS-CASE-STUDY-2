@@ -7,8 +7,6 @@
         From [KMS Sql Case Study] 
 	     group by Ship_Mode 
       Order by Highestshippingcost  desc;
-                                        ``
-     ```sql
          select top 10 (Shipping_Cost) As HighestshippingCost,
         Ship_Mode,Ship_Date
        from [KMS Sql Case Study] 
