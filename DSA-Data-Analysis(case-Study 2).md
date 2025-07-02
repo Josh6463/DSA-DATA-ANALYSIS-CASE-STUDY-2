@@ -130,9 +130,19 @@ I. Findings;
   
 Q9 Which consumer customer was the most profitable one?
 ```sql
+     select top 1 Customer_Name,Customer_Segment,
+   sum(Profit) MostProfitable
+   from [KMS Sql Case Study]
+   where Customer_Segment = 'Consumer'
+   group by Customer_Name,Customer_Segment
+  order by MostProfitable desc;
+```
+![image](https://github.com/user-attachments/assets/1309bd83-4006-4ab6-be6c-6bbf1dfadf12)
 
-
-
+I. Explanation
+- group the data by the Customer_Name,Customer_Segment and summed the Profit based on the group AS MostProfittable
+- used a conditional clause 'where' to filter the Customer_segment to a desired segment and sort the Sales in descending order to get the highest profit
+  
 
 
 
