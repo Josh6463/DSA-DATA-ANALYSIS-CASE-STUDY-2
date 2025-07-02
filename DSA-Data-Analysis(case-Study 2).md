@@ -176,7 +176,10 @@ The second table the Customer_Name with the number of returns and the segment th
        Group by Order_priority,Ship_Mode
        order by Order_priority,TotalOrder desc;
       ```
-![image](https://github.com/user-attachments/assets/1cb56b29-8b1e-45a1-a9c0-ac419918b91b)
+![image](https://github.com/user-attachments/assets/a164a73d-7680-48f4-ae5e-1785203960a7)
+![image](https://github.com/user-attachments/assets/b09e21c4-0437-402f-80ed-cdf0f70ab89e)
+
+
 
 
 
