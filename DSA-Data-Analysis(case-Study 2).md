@@ -29,6 +29,8 @@ II. Finding ;
 The Table above shows that the Ship_Mode with the highest Shipping Cost is 
 Delivery Truck with the Cost of (# 51971.940)
 
+CASESTUDY 2
+
 Q6. Who are the most valuable customers, and what products or services do they           typically purchase?
 
 ```sql
@@ -77,14 +79,60 @@ III. The breakdown of the Product bought the Most Valuable Customers are
 
 This resulted to a table with a lot of rows because the Customers actually bought Products from Different Category which resulted in Their Names being Repeated in multiple rows.
 
-## CASE SCENARIO 2
-
-6. Who are the most valuable customers, and what products or services do they typically purchase?
-7. Which small business customer had the highest sales?
-8. Which Corporate Customer placed the most number of orders in 2009 – 2012?
 9. Which consumer customer was the most profitable one?
 10. Which customer returned items, and what segment do they belong to?
 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
 
-Q6. Who are the most valuable customers, and what products or services do they typically purchase?
+Q7. Which small business customer had the highest sales?
+```sql
+      Select top 1 Customer_Name, Customer_segment,
+   Sum(Sales) As TotalSmallBusinessSales  from [KMS Sql Case Study]
+  where  Customer_Segment = 'Small Business'
+  Group by Customer_Name,Customer_Segment
+  Order by TotalSmallBusinessSales Desc
+```
+![image](https://github.com/user-attachments/assets/459f77a7-1153-4edf-81e9-c0b83d93821d)
+
+I. Explanation 
+1. Group the data by the Customer_Name and Customer_Segment to Categorise the data
+2. Summed the sales As TotalSmallBusinesssales based on the Group to calculate the summation of sales by group data.
+3. Used a conditional clause 'where' to calculate the result for the desired Customer_Segment 'small Business'
+4. Sort the TotalSmallBusinesssales in descending order to select the highest sales
+
+II. Findings;
+
+The Table above shows that the small Business Customer With the highest sales is Dennis Kane having a Totalsales of (# 75967.591)
+
+Q8. Which Corporate Customer placed the most number of orders in 2009 – 2012?
+```sql
+  select top 1 Customer_Segment,Customer_Name,
+   Count(Order_ID) As TotalOrder 
+  from [dbo].[KMS Sql Case Study]
+  where Customer_Segment = 'Corporate'
+  group by Customer_Segment, Customer_Name
+  order by TotalOrder desc
+-----To get the Product Ordered by Corporate Customer With Highest Order and the order_Quantity-----
+   select  Customer_Name,Product_Sub_Category,Order_Quantity
+   from [dbo].[KMS Sql Case Study]
+    where Customer_Segment = 'Corporate' and Customer_Name = 'Adam Hart'
+	group by Product_Sub_Category,Customer_Name,Order_Quantity
+	order by Order_Quantity desc;
+```
+The second Query shows the breakdown of the order by corporate customer with the Highest sales showing the order by Product_Sub_category
+
+ ![image](https://github.com/user-attachments/assets/16ab682f-e565-4920-a0d6-3d4545a7a445)
+
+I. Findings;
+
+- The Corporate Customer that placed the most number of order between 2009-2012 is;
+ Adam Hart with a totalorder of 27
+- found out that Adam Hart place order with large quantity of Office Supplies, Technology and Appliances
+  
+Q9 Which consumer customer was the most profitable one?
+```sql
+
+
+
+
+
 
