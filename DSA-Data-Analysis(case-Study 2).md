@@ -75,6 +75,8 @@ III. The breakdown of the Product bought the Most Valuable Customers are
 ![image](https://github.com/user-attachments/assets/514c77a2-18f6-4408-8acb-3f45a253a5b9)
 ![image](https://github.com/user-attachments/assets/8c576b47-1564-40fa-abc5-299d90a8334c)
 
-This resulted to a table with a lot rows because the Customers actually bought Products from Different Category which resulted in Their Names being Repeated in multiple rows.
+This resulted to a table with a lot of rows because the Customers actually bought Products from Different Category which resulted in Their Names being Repeated in multiple rows.
+
+
 
 
