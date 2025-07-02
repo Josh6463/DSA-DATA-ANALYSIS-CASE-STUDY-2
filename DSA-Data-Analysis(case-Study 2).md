@@ -1,5 +1,5 @@
 
- Q5. KMS incurred the most shipping cost using which shipping method?
+ #### Q5. KMS incurred the most shipping cost using which shipping method?
  ```sql
       select top 1 Ship_Mode,
       Sum(Shipping_Cost) As Highestshippingcost
@@ -31,7 +31,7 @@ Delivery Truck with the Cost of (# 51971.940)
 
 CASESTUDY 2
 
-Q6. Who are the most valuable customers, and what products or services do they           typically purchase?
+#### Q6. Who are the most valuable customers, and what products or services do they           typically purchase?
 
 ```sql
      SELECT TOP 5 Customer_Name, SUM(Sales) AS TotalSales
@@ -82,7 +82,7 @@ This resulted to a table with a lot of rows because the Customers actually bough
 
 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
 
-Q7. Which small business customer had the highest sales?
+#### Q7. Which small business customer had the highest sales?
 ```sql
       Select top 1 Customer_Name, Customer_segment,
    Sum(Sales) As TotalSmallBusinessSales  from [KMS Sql Case Study]
@@ -102,7 +102,7 @@ II. Findings;
 
 The Table above shows that the small Business Customer With the highest sales is Dennis Kane having a Totalsales of (# 75967.591)
 
-Q8. Which Corporate Customer placed the most number of orders in 2009 – 2012?
+#### Q8. Which Corporate Customer placed the most number of orders in 2009 – 2012?
 ```sql
   select top 1 Customer_Segment,Customer_Name,
    Count(Order_ID) As TotalOrder 
@@ -127,7 +127,7 @@ I. Findings;
  Adam Hart with a totalorder of 27
 - found out that Adam Hart place order with large quantity of Office Supplies, Technology and Appliances
   
-Q9 Which consumer customer was the most profitable one?
+#### Q9 Which consumer customer was the most profitable one?
 ```sql
      select top 1 Customer_Name,Customer_Segment,
    sum(Profit) MostProfitable
@@ -145,7 +145,7 @@ I. Explanation;
 II. findings;
 -Found out the Consumer customer That is most Profitable is 'Emily Phan with profit of (# 34005.44)
 
-10. Which customer returned items, and what segment do they belong to?
+#### 10. Which customer returned items, and what segment do they belong to?
 11. If the delivery truck is the most economical but the slowest shipping method and
 Express Air is the fastest but the most expensive one, do you think the company
 appropriately spent shipping costs based on the Order Priority? Explain your answer
@@ -168,7 +168,7 @@ The Table Above shows the list of top 10 Customers that returned Items and the s
 The second table the Customer_Name with the number of returns and the segment those Items were return to
 - this table shows that Most Returned Items belong to the Consumer_segment which could depict that there is something wrong with the quality of Products Under the Consumer Category
 
-  Q11. 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
+  #### Q11. 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one, do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer
  ```sql 
        select Order_priority,Ship_Mode,
        count(distinct Order_ID) AS TotalOrder
