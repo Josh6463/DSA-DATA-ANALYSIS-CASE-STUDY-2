@@ -77,6 +77,9 @@ III. The breakdown of the Product bought the Most Valuable Customers are
 
 This resulted to a table with a lot of rows because the Customers actually bought Products from Different Category which resulted in Their Names being Repeated in multiple rows.
 
+## CASE SCENARIO 2
+
+
 
 
 
