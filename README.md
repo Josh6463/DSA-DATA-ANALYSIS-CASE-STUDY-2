@@ -165,25 +165,8 @@ III. Advise/Recommendation
 - I advise the company to review the quality of the products produced under the Office Supplies Category.
 - The Company should also track the Progress of the Product_Category in their marketing Strategy and If possible reduces the cost of the Products in the Category.
 
-#### Q5. KMS incurred the most shipping cost using which shipping method?
-```sql
-      select top 1 Ship_Mode,
-       Sum(Shipping_Cost) As Highestshippingcost
-        From [KMS Sql Case Study] 
-	group by Ship_Mode 
-   Order by Highestshippingcost  desc;
-```
-![image](https://github.com/user-attachments/assets/226d7987-9caa-40de-a567-48b570791b77)
 
-```sql
-     select top 10 (Shipping_Cost) As HighestshippingCost,
-    Ship_Mode,Ship_Date
-    from [KMS Sql Case Study] 
-     group by Shipping_Cost,Ship_Mode,Ship_Date
-      order by HighestshippingCost desc
-    ```
-![image](https://github.com/user-attachments/assets/2ff13e75-d4b2-41dd-8045-71315dbcbcbf)
-
+   
 
 
 
